@@ -6,10 +6,10 @@ import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 
 const contactSchema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100),
-  email: z.string().trim().email("Invalid email address").max(255),
-  phone: z.string().trim().min(1, "Phone is required").max(20),
-  message: z.string().trim().min(1, "Message is required").max(1000),
+  name: z.string().trim().min(1, "Nome é obrigatório").max(100),
+  email: z.string().trim().email("Endereço de e-mail inválido").max(255),
+  phone: z.string().trim().min(1, "Telefone é obrigatório").max(20),
+  message: z.string().trim().min(1, "Mensagem é obrigatória").max(1000),
 });
 
 interface ContactFormProps {
@@ -35,8 +35,8 @@ const ContactForm = ({ company }: ContactFormProps) => {
       
       // Here you would typically send the data to your backend
       toast({
-        title: "Message sent!",
-        description: "We'll get back to you soon.",
+        title: "Mensagem enviada!",
+        description: "Entraremos em contato em breve.",
       });
       
       setFormData({ name: "", email: "", phone: "", message: "" });
@@ -65,7 +65,7 @@ const ContactForm = ({ company }: ContactFormProps) => {
       <div>
         <Input
           name="name"
-          placeholder="Your Name"
+          placeholder="Seu Nome"
           value={formData.name}
           onChange={handleChange}
           className={errors.name ? "border-destructive" : ""}
@@ -77,7 +77,7 @@ const ContactForm = ({ company }: ContactFormProps) => {
         <Input
           name="email"
           type="email"
-          placeholder="Your Email"
+          placeholder="Seu E-mail"
           value={formData.email}
           onChange={handleChange}
           className={errors.email ? "border-destructive" : ""}
@@ -88,7 +88,7 @@ const ContactForm = ({ company }: ContactFormProps) => {
       <div>
         <Input
           name="phone"
-          placeholder="Your Phone"
+          placeholder="Seu Telefone"
           value={formData.phone}
           onChange={handleChange}
           className={errors.phone ? "border-destructive" : ""}
@@ -99,7 +99,7 @@ const ContactForm = ({ company }: ContactFormProps) => {
       <div>
         <Textarea
           name="message"
-          placeholder={`Tell us about your ${company.toLowerCase()} needs...`}
+          placeholder={`Conte-nos sobre suas necessidades de ${company === 'Concrete' ? 'concreto' : 'asfalto'}...`}
           value={formData.message}
           onChange={handleChange}
           rows={5}
@@ -109,7 +109,7 @@ const ContactForm = ({ company }: ContactFormProps) => {
       </div>
       
       <Button type="submit" className="w-full bg-accent hover:bg-accent/90">
-        Send Message
+        Enviar Mensagem
       </Button>
     </form>
   );

@@ -10,25 +10,25 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
               <Building2 className="h-8 w-8" />
-              <span className="text-xl font-bold">Construction Group</span>
+              <span className="text-xl font-bold">Grupo MR</span>
             </Link>
             <p className="text-primary-foreground/80 mb-4">
-              Leading the construction industry with excellence and innovation since 1990.
+              Liderando a indústria da construção com excelência e inovação desde 1990.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Our Companies</h3>
+            <h3 className="text-lg font-semibold mb-4">Nossas Empresas</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/concrete" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Concrete Solutions
+                  MR Mix Concreto
                 </Link>
               </li>
               <li>
                 <Link to="/asphalt" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Asphalt Services
+                  MR Pavimentação
                 </Link>
               </li>
             </ul>
@@ -36,7 +36,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-primary-foreground/80">
                 <Phone className="h-4 w-4" />
@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-primary-foreground/80">
-          <p>&copy; {new Date().getFullYear()} Construction Group. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Grupo MR. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

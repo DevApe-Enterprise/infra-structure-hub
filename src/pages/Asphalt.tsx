@@ -8,30 +8,30 @@ import heroImage from "@/assets/asphalt-hero.jpg";
 const services = [
   {
     icon: Navigation,
-    title: "Asphalt Paving",
-    description: "Professional paving services for roads, parking lots, and driveways using premium materials.",
+    title: "Pavimentação Asfáltica",
+    description: "Serviços profissionais de pavimentação para estradas, estacionamentos e vias utilizando materiais premium.",
   },
   {
     icon: Layers,
-    title: "Road Resurfacing",
-    description: "Expert resurfacing to restore and enhance existing pavement surfaces.",
+    title: "Recapeamento de Vias",
+    description: "Recapeamento especializado para restaurar e melhorar superfícies de pavimento existentes.",
   },
   {
     icon: Hammer,
-    title: "Repair & Maintenance",
-    description: "Comprehensive maintenance solutions including patching, crack sealing, and sealcoating.",
+    title: "Reparos e Manutenção",
+    description: "Soluções abrangentes de manutenção incluindo remendos, selagem de trincas e impermeabilização.",
   },
   {
     icon: Shield,
-    title: "Quality Assurance",
-    description: "Rigorous testing and quality control to ensure long-lasting, durable results.",
+    title: "Garantia de Qualidade",
+    description: "Testes rigorosos e controle de qualidade para garantir resultados duradouros e resistentes.",
   },
 ];
 
 const Asphalt = () => {
   return (
     <div className="min-h-screen">
-      <Header title="Asphalt Services" showGroupNav={false} />
+      <Header title="MR Pavimentação" showGroupNav={false} />
       
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden mt-16">
@@ -43,10 +43,10 @@ const Asphalt = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
-            Asphalt Services
+            MR Pavimentação
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Professional paving and road maintenance solutions built to last
+            Soluções profissionais de pavimentação e manutenção de estradas construídas para durar
           </p>
         </div>
       </section>
@@ -56,16 +56,16 @@ const Asphalt = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground text-center">
-              About Our Company
+              Sobre Nossa Empresa
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6 text-center">
-              As a leader in asphalt services for over three decades, we've paved thousands of 
-              miles of roads, highways, and commercial properties. Our modern fleet of paving 
-              equipment and experienced crews deliver exceptional results on every project.
+              Como líder em serviços de asfalto há mais de três décadas, pavimentamos milhares de
+              quilômetros de estradas, rodovias e propriedades comerciais. Nossa frota moderna de
+              equipamentos de pavimentação e equipes experientes entregam resultados excepcionais em cada projeto.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed text-center">
-              From small residential driveways to large-scale highway projects, we bring the same 
-              commitment to quality, safety, and customer satisfaction.
+              De pequenas vias residenciais a projetos rodoviários de grande escala, trazemos o mesmo
+              compromisso com qualidade, segurança e satisfação do cliente.
             </p>
           </div>
         </div>
@@ -75,7 +75,7 @@ const Asphalt = () => {
       <section id="services" className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-foreground text-center">
-            Our Services
+            Nossos Serviços
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -100,28 +100,28 @@ const Asphalt = () => {
       <section className="py-20 bg-gradient-section">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-foreground text-center">
-            Specialized Solutions
+            Soluções Especializadas
           </h2>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-card p-6 rounded-lg shadow-card">
-              <h3 className="text-xl font-bold mb-3 text-foreground">Commercial Paving</h3>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Pavimentação Comercial</h3>
               <p className="text-muted-foreground">
-                Large-scale paving for parking lots, industrial areas, and commercial developments.
+                Pavimentação em larga escala para estacionamentos, áreas industriais e empreendimentos comerciais.
               </p>
             </div>
-            
+
             <div className="bg-card p-6 rounded-lg shadow-card">
-              <h3 className="text-xl font-bold mb-3 text-foreground">Highway Construction</h3>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Construção Rodoviária</h3>
               <p className="text-muted-foreground">
-                Major roadway projects with advanced equipment and certified crews.
+                Projetos rodoviários de grande porte com equipamentos avançados e equipes certificadas.
               </p>
             </div>
-            
+
             <div className="bg-card p-6 rounded-lg shadow-card">
-              <h3 className="text-xl font-bold mb-3 text-foreground">Preventive Maintenance</h3>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Manutenção Preventiva</h3>
               <p className="text-muted-foreground">
-                Proactive maintenance programs to extend pavement life and reduce costs.
+                Programas de manutenção proativa para prolongar a vida útil do pavimento e reduzir custos.
               </p>
             </div>
           </div>
@@ -132,17 +132,17 @@ const Asphalt = () => {
       <section id="projects" className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-foreground text-center">
-            Featured Projects
+            Projetos em Destaque
           </h2>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[1, 2, 3].map((i) => (
               <div key={i} className="bg-card rounded-lg overflow-hidden shadow-card hover:shadow-hover transition-shadow">
                 <div className="aspect-video bg-muted" />
                 <div className="p-4">
-                  <h3 className="font-bold text-foreground mb-2">Paving Project {i}</h3>
+                  <h3 className="font-bold text-foreground mb-2">Projeto de Pavimentação {i}</h3>
                   <p className="text-sm text-muted-foreground">
-                    Professional asphalt paving completed with precision and quality.
+                    Pavimentação asfáltica profissional concluída com precisão e qualidade.
                   </p>
                 </div>
               </div>
@@ -155,10 +155,10 @@ const Asphalt = () => {
       <section id="contact" className="py-20 bg-gradient-section">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground text-center">
-            Request a Quote
+            Solicite um Orçamento
           </h2>
           <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
-            Contact us today to discuss your asphalt paving needs and get a competitive quote.
+            Entre em contato hoje para discutir suas necessidades de pavimentação asfáltica e receber um orçamento competitivo.
           </p>
           
           <ContactForm company="Asphalt" />

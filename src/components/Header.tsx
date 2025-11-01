@@ -14,14 +14,14 @@ interface HeaderProps {
 
 const Header = ({ title, showGroupNav = true }: HeaderProps) => {
   const navLinks = showGroupNav ? [
-    { label: "About", href: "#about" },
-    { label: "Our Companies", href: "#companies" },
-    { label: "Contact", href: "#contact" },
+    { label: "Sobre", href: "#about" },
+    { label: "Nossas Empresas", href: "#companies" },
+    { label: "Contato", href: "#contact" },
   ] : [
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
+    { label: "Sobre", href: "#about" },
+    { label: "Serviços", href: "#services" },
+    { label: "Projetos", href: "#projects" },
+    { label: "Contato", href: "#contact" },
   ];
 
   return (
@@ -46,7 +46,7 @@ const Header = ({ title, showGroupNav = true }: HeaderProps) => {
             ))}
             {!showGroupNav && (
               <Link to="/">
-                <Button variant="outline">Back to Group</Button>
+                <Button variant="outline">Voltar ao Grupo</Button>
               </Link>
             )}
           </nav>
@@ -71,7 +71,7 @@ const Header = ({ title, showGroupNav = true }: HeaderProps) => {
                 ))}
                 {!showGroupNav && (
                   <Link to="/">
-                    <Button variant="outline" className="w-full">Back to Group</Button>
+                    <Button variant="outline" className="w-full">Voltar ao Grupo</Button>
                   </Link>
                 )}
               </nav>

@@ -12,7 +12,7 @@ import asphaltImage from "@/assets/asphalt-card.jpg";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Header title="Construction Group" showGroupNav />
+      <Header title="Grupo MR" showGroupNav />
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -24,19 +24,19 @@ const Index = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Building the Future
+            Construindo o Futuro
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Leading construction excellence with concrete and asphalt solutions for over 30 years
+            Liderando a excelência na construção com soluções em concreto e asfalto há mais de 30 anos
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-lg">
               <a href="#companies">
-                Our Companies <ArrowRight className="ml-2 h-5 w-5" />
+                Nossas Empresas <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white/10 text-lg">
-              <a href="#contact">Contact Us</a>
+            <Button asChild size="lg" variant="outline" className="text-black border-white hover:bg-white/10 text-lg">
+              <a href="#contact">Entre em Contato</a>
             </Button>
           </div>
         </div>
@@ -47,16 +47,16 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-              About Our Group
+              Sobre o Grupo MR
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Construction Group is a leading force in the construction industry, bringing together 
-              specialized expertise in concrete and asphalt solutions. With over three decades of 
-              experience, we've built our reputation on quality, reliability, and innovation.
+              O Grupo MR é uma força líder na indústria da construção, reunindo expertise
+              especializada em soluções de concreto e asfalto. Com mais de três décadas de
+              experiência, construímos nossa reputação com base em qualidade, confiabilidade e inovação.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our integrated approach allows us to deliver comprehensive construction solutions, 
-              from foundation to finish, ensuring excellence at every stage of your project.
+              Nossa abordagem integrada nos permite fornecer soluções de construção abrangentes,
+              da fundação ao acabamento, garantindo excelência em cada etapa do seu projeto.
             </p>
           </div>
         </div>
@@ -66,7 +66,7 @@ const Index = () => {
       <section id="companies" className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-            Our Companies
+            Nossas Empresas
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -80,14 +80,14 @@ const Index = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3 text-foreground">Concrete Solutions</h3>
+                <h3 className="text-2xl font-bold mb-3 text-foreground">MR Mix Concreto</h3>
                 <p className="text-muted-foreground mb-4">
-                  Premium ready-mix concrete, pumping services, and specialized concrete products 
-                  for all your construction needs.
+                  Concreto usinado premium, serviços de bombeamento e produtos especializados
+                  para todas as suas necessidades de construção.
                 </p>
                 <Button asChild className="w-full bg-primary hover:bg-primary/90">
                   <Link to="/concrete">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                    Saiba Mais <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </div>
@@ -103,14 +103,14 @@ const Index = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3 text-foreground">Asphalt Services</h3>
+                <h3 className="text-2xl font-bold mb-3 text-foreground">MR Pavimentação</h3>
                 <p className="text-muted-foreground mb-4">
-                  Professional paving, resurfacing, and road maintenance services with 
-                  state-of-the-art equipment and expertise.
+                  Serviços profissionais de pavimentação, recapeamento e manutenção de estradas com
+                  equipamentos de última geração e expertise comprovada.
                 </p>
                 <Button asChild className="w-full bg-primary hover:bg-primary/90">
                   <Link to="/asphalt">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                    Saiba Mais <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </div>
@@ -127,18 +127,18 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-              Get In Touch
+              Entre em Contato
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Ready to start your next project? Contact us today to discuss how we can help 
-              bring your construction vision to life.
+              Pronto para iniciar seu próximo projeto? Entre em contato hoje para discutir como
+              podemos ajudar a transformar sua visão de construção em realidade.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
-                <Link to="/concrete">Concrete Services</Link>
+                <Link to="/concrete">Serviços de Concreto</Link>
               </Button>
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
-                <Link to="/asphalt">Asphalt Services</Link>
+                <Link to="/asphalt">Serviços de Asfalto</Link>
               </Button>
             </div>
           </div>

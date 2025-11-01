@@ -41,7 +41,7 @@ All colors MUST be HSL.
     /* Construction theme gradients */
     --gradient-hero: linear-gradient(135deg, hsl(210 85% 25%) 0%, hsl(210 75% 35%) 100%);
     --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(215 15% 98%) 100%);
-    --gradient-overlay: linear-gradient(135deg, hsl(210 85% 25% / 0.95) 0%, hsl(210 75% 35% / 0.90) 100%);
+    --gradient-overlay: linear-gradient(135deg, hsl(25 85% 35% / 0.75) 0%, hsl(20 80% 30% / 0.70) 100%);
     
     /* Shadows */
     --shadow-card: 0 4px 20px hsl(210 85% 25% / 0.08);
@@ -113,5 +113,15 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-overlay {
+    background: var(--gradient-overlay);
+  }
+
+  .bg-gradient-section {
+    background: var(--gradient-section);
   }
 }

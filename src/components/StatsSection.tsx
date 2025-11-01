@@ -4,22 +4,22 @@ const stats = [
   {
     icon: Calendar,
     value: "30+",
-    label: "Years of Experience",
+    label: "Anos de Experiência",
   },
   {
     icon: Building,
     value: "500+",
-    label: "Completed Projects",
+    label: "Projetos Concluídos",
   },
   {
     icon: Users,
     value: "150+",
-    label: "Team Members",
+    label: "Membros da Equipe",
   },
   {
     icon: Award,
     value: "50+",
-    label: "Industry Awards",
+    label: "Prêmios do Setor",
   },
 ];
 
@@ -28,7 +28,7 @@ const StatsSection = () => {
     <section className="py-20 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Our Numbers Speak
+          Nossos Números Falam
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
