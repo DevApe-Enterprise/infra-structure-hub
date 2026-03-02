@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ContactForm from "@/components/ContactForm";
+import ConcreteCalculator from "@/components/ConcreteCalculator";
 import heroImage from "@/assets/concrete-hero.jpg";
 
 const services = [
@@ -31,7 +32,7 @@ const services = [
 const Concrete = () => {
   return (
     <div className="min-h-screen">
-      <Header title="MR Mix Concreto" showGroupNav={false} />
+      <Header title="MR Mix Concreto" showGroupNav={false} showCalculator={true} />
       
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden mt-16">
@@ -125,6 +126,20 @@ const Concrete = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Calculator Section */}
+      <section id="calculator" className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground text-center">
+            Calculadora de Concreto
+          </h2>
+          <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
+            Calcule facilmente a quantidade de concreto necessária para sua obra
+          </p>
+
+          <ConcreteCalculator />
         </div>
       </section>
 

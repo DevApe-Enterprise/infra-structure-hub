@@ -3,9 +3,8 @@ import { Button } from "@/components/ui/button";
 
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
-    // Replace with actual WhatsApp number
-    const phoneNumber = "1555123456";
-    const message = encodeURIComponent("Hello! I'm interested in your services.");
+    const phoneNumber = "5599991705960";
+    const message = encodeURIComponent("Olá! Tenho interesse nos serviços do Grupo MR.");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
   };
 

@@ -10,9 +10,10 @@ import {
 interface HeaderProps {
   title: string;
   showGroupNav?: boolean;
+  showCalculator?: boolean;
 }
 
-const Header = ({ title, showGroupNav = true }: HeaderProps) => {
+const Header = ({ title, showGroupNav = true, showCalculator = false }: HeaderProps) => {
   const navLinks = showGroupNav ? [
     { label: "Sobre", href: "#about" },
     { label: "Nossas Empresas", href: "#companies" },
@@ -20,6 +21,7 @@ const Header = ({ title, showGroupNav = true }: HeaderProps) => {
   ] : [
     { label: "Sobre", href: "#about" },
     { label: "Serviços", href: "#services" },
+    ...(showCalculator ? [{ label: "Calculadora", href: "#calculator" }] : []),
     { label: "Projetos", href: "#projects" },
     { label: "Contato", href: "#contact" },
   ];
