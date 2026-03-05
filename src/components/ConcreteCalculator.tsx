@@ -15,7 +15,6 @@ interface CalculatorState {
   height: string;
   thickness: string;
   diameter: string;
-  pricePerM3: string;
   quantity: string;
 }
 
@@ -27,14 +26,10 @@ const ConcreteCalculator = () => {
     height: "",
     thickness: "",
     diameter: "",
-    pricePerM3: "",
     quantity: "1",
   });
 
-  const [result, setResult] = useState<{
-    volume: number;
-    totalCost: number | null;
-  } | null>(null);
+  const [result, setResult] = useState<number | null>(null);
 
   const updateField = (field: keyof CalculatorState, value: string) => {
     setState(prev => ({ ...prev, [field]: value }));
@@ -94,13 +89,7 @@ const ConcreteCalculator = () => {
     value.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   const handleCalculate = () => {
-    const volume = calculateVolume();
-    const price = parseFloat(state.pricePerM3);
-
-    setResult({
-      volume: volume,
-      totalCost: price > 0 ? volume * price : null,
-    });
+    setResult(calculateVolume());
   };
 
   const getStructureTypeName = (type: StructureType | ""): string => {
@@ -137,7 +126,7 @@ const ConcreteCalculator = () => {
         break;
     }
 
-    const volumeText = result ? `\n\nVolume calculado: ${formatBR(result.volume)} m³` : "";
+    const volumeText = result !== null ? `\n\nVolume calculado: ${formatBR(result)} m³` : "";
 
     return `Olá! Gostaria de um orçamento personalizado de concreto para uma ${structureName} com ${dimensionsText}${qtyText}.${volumeText}`;
   };
@@ -348,7 +337,6 @@ const ConcreteCalculator = () => {
                 height: "",
                 thickness: "",
                 diameter: "",
-                pricePerM3: state.pricePerM3,
                 quantity: state.quantity,
               });
               setResult(null);
@@ -374,9 +362,9 @@ const ConcreteCalculator = () => {
           </div>
         )}
 
-        {/* Quantity and Price */}
+        {/* Quantity */}
         {state.structureType && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t">
+          <div className="pt-4 border-t max-w-xs">
             <div className="space-y-2">
               <Label htmlFor="quantity">Quantidade</Label>
               <Input
@@ -387,17 +375,6 @@ const ConcreteCalculator = () => {
                 placeholder="Ex: 1"
                 value={state.quantity}
                 onChange={(e) => updateField("quantity", e.target.value)}
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="pricePerM3">Preço por m³ (opcional)</Label>
-              <Input
-                id="pricePerM3"
-                type="number"
-                step="0.01"
-                placeholder="Ex: 450,00"
-                value={state.pricePerM3}
-                onChange={(e) => updateField("pricePerM3", e.target.value)}
               />
             </div>
           </div>
@@ -416,26 +393,14 @@ const ConcreteCalculator = () => {
         )}
 
         {/* Results */}
-        {result && result.volume > 0 && (
+        {result !== null && result > 0 && (
           <div className="mt-6 p-6 bg-primary/5 rounded-lg border-2 border-primary/20">
             <h3 className="text-lg font-semibold mb-4 text-foreground">Resultado</h3>
-            <div className="space-y-3">
-              <div className="flex justify-between items-center">
-                <span className="text-muted-foreground">Volume de Concreto:</span>
-                <span className="text-2xl font-bold text-primary">
-                  {formatBR(result.volume)} m³
-                </span>
-              </div>
-              {result.totalCost !== null && (
-                <>
-                  <div className="border-t pt-3 flex justify-between items-center">
-                    <span className="text-muted-foreground">Custo Total Estimado:</span>
-                    <span className="text-2xl font-bold text-accent">
-                      R$ {formatBR(result.totalCost)}
-                    </span>
-                  </div>
-                </>
-              )}
+            <div className="flex justify-between items-center">
+              <span className="text-muted-foreground">Volume de Concreto:</span>
+              <span className="text-2xl font-bold text-primary">
+                {formatBR(result)} m³
+              </span>
             </div>
             <div className="mt-4 pt-4 border-t">
               <p className="text-sm text-muted-foreground mb-4">
