@@ -44,7 +44,7 @@ const LeadForm = ({ onSubmit }: LeadFormProps) => {
         await fetch(scriptUrl, {
           method: "POST",
           mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "text/plain" },
           body: JSON.stringify({ name: name.trim(), phone: digits }),
         });
       } catch {
