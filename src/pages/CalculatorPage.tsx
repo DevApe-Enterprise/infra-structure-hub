@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { MessageCircle } from "lucide-react";
 import ConcreteCalculator from "@/components/ConcreteCalculator";
+import LeadForm from "@/components/LeadForm";
 import logo from "@/assets/logo.png";
 
 const CalculatorPage = () => {
+  const [lead, setLead] = useState<{ name: string; phone: string } | null>(null);
+
   const handleWhatsAppClick = () => {
     const phoneNumber = "5599991705960";
     const message = encodeURIComponent("Olá! Tenho interesse nos serviços da MR Mix Concreto.");
@@ -33,13 +37,17 @@ const CalculatorPage = () => {
           Calculadora de Concreto
         </h1>
         <p className="text-white/85 text-base md:text-lg max-w-xl mx-auto">
-          Calcule o volume e o custo estimado de concreto para sua obra em segundos
+          Calcule o volume de concreto necessário para sua obra em segundos
         </p>
       </div>
 
-      {/* Calculator */}
+      {/* Lead form or Calculator */}
       <main className="flex-1 container mx-auto px-4 py-10 max-w-4xl">
-        <ConcreteCalculator />
+        {!lead ? (
+          <LeadForm onSubmit={(name, phone) => setLead({ name, phone })} />
+        ) : (
+          <ConcreteCalculator />
+        )}
       </main>
 
       {/* Footer */}
